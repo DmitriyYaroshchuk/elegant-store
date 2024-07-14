@@ -1,0 +1,47 @@
+.swiper-slide {
+  max-width: 262px;
+  width: 100%;
+
+  @include mobile {
+    max-width: 231px;
+  }
+}
+
+.swiper-pagination {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: border 0.3s ease-in;
+
+
+  &::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #6C7275;
+
+    transition: border 0.3s ease-in;
+  }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  border: 1px solid #141718;
+
+  &::before {
+    background-color: #141718;
+  }
+}
